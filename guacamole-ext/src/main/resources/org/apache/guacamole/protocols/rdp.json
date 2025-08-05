@@ -38,7 +38,20 @@
                 {
                     "name"    : "security",
                     "type"    : "ENUM",
-                    "options" : [ "", "any", "nla", "rdp", "tls", "vmconnect" ]
+                    "options" : [ "", "rdp", "tls", "nla", "vmconnect", "any" ]
+                },
+                {
+                    "name"    : "auth-pkg",
+                    "type"    : "ENUM",
+                    "options" : [ "", "ntlm", "kerberos"]
+                },
+                {
+                    "name"    : "kdc-url",
+                    "type"    : "TEXT"
+                },
+                {
+                    "name"    : "kerberos-cache",
+                    "type"    : "TEXT"
                 },
                 {
                     "name"    : "disable-auth",
@@ -111,11 +124,12 @@
                         "en-us-qwerty",
                         "es-es-qwerty",
                         "es-latam-qwerty",
+                        "failsafe",
                         "fr-be-azerty",
                         "fr-fr-azerty",
                         "fr-ca-qwerty",
                         "fr-ch-qwertz",
-                        "hu-hu-qwertz",
+                        "hu-hu-qwertz",                        
                         "it-it-qwerty",
                         "ja-jp-qwerty",
                         "no-no-qwerty",
@@ -125,8 +139,7 @@
                         "ro-ro-qwerty",
                         "sv-se-qwerty",
                         "da-dk-qwerty",
-                        "tr-tr-qwerty",
-                        "failsafe"
+                        "tr-tr-qwerty"
                     ]
                 },
                 {
@@ -174,7 +187,7 @@
                 {
                     "name"    : "resize-method",
                     "type"    : "ENUM",
-                    "options" : [ "", "display-update", "reconnect" ]
+                    "options" : [ "", "reconnect", "display-update" ]
                 },
                 {
                     "name"    : "read-only",
