@@ -60,6 +60,7 @@ ENV \
     BUILD_DIR=/tmp/guacamole-docker-BUILD
 
 # Add configuration scripts
+ADD --chown 1001:1001 --chmod 755 /opt/guacamole/entrypoint.d/
 COPY guacamole-docker/bin/ /opt/guacamole/bin/
 COPY guacamole-docker/build.d/ /opt/guacamole/build.d/
 COPY guacamole-docker/entrypoint.d/ /opt/guacamole/entrypoint.d/
